@@ -1,0 +1,19 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# Generated code
+app/build/
+
+# The ONNX model is ~26 MB – safe to commit on GitHub (< 100 MB limit).
+# If you prefer to keep it out of the repo, uncomment the line below
+# and run scripts/download_model.ps1 / download_model.sh after cloning.
+# app/src/main/assets/*.onnx
