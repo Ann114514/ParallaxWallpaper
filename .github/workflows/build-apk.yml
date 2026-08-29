@@ -34,7 +34,11 @@ jobs:
           gradle-version: '8.7'
 
       - name: Download Depth Anything V2 model
-        run: bash scripts/download_model.sh
+        run: |
+          mkdir -p app/src/main/assets
+          curl -L --fail --retry 3 \
+            -o app/src/main/assets/depthanythingv2-vits-dynamic-quant.onnx \
+            "https://raw.githubusercontent.com/combatwombat/tiefling/main/site/public/models/depthanythingv2-vits-dynamic-quant.onnx"
 
       - name: Verify model
         run: |
